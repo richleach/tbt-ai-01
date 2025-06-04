@@ -9,35 +9,35 @@ export function SiteFooter() {
       <div className="container mx-auto max-w-7xl flex flex-col items-center gap-4 px-4 sm:px-6 lg:px-8 md:flex-row md:justify-between">
         <div className="flex items-center gap-4">
           <Link
-            href="https://facebook.com"
+            href="https://www.facebook.com/TheBeatenTrailLLC"
             className="text-[#2D2D2D] hover:text-[#8B2E1D]"
             target="_blank"
           >
             <Facebook className="h-6 w-6" />
           </Link>
           <Link
-            href="https://youtube.com"
+            href="https://www.youtube.com/channel/UCnIyytMWGt41WZAc6QocKcQ"
             className="text-[#2D2D2D] hover:text-[#8B2E1D]"
             target="_blank"
           >
             <Youtube className="h-6 w-6" />
           </Link>
           <Link
-            href="https://twitter.com"
+            href="https://x.com/thebeatentrail1"
             className="text-[#2D2D2D] hover:text-[#8B2E1D]"
             target="_blank"
           >
             <Twitter className="h-6 w-6" />
           </Link>
           <Link
-            href="https://instagram.com"
+            href="https://www.instagram.com/thebeatentrail/"
             className="text-[#2D2D2D] hover:text-[#8B2E1D]"
             target="_blank"
           >
             <Instagram className="h-6 w-6" />
           </Link>
           <Link
-            href="https://tiktok.com"
+            href="https://www.tiktok.com/@thebeatentrail"
             className="text-[#2D2D2D] hover:text-[#8B2E1D]"
             target="_blank"
           >

@@ -19,13 +19,14 @@ export function SiteHeader() {
 
           <div className="flex flex-col md:flex-row gap-4 md:gap-6 w-full md:w-auto">
             <a
-              href="#"
+              href="/store"
               className="inline-flex items-center justify-center px-6 py-3 
-            border-2 border-[#5C452B] 
-            text-[#1F1F1F] font-semibold 
+            border-1 border-[#3b82f6] 
+            text-zinc-700 font-semibold 
             bg-white rounded-lg shadow-md 
-            hover:bg-gray-50 
-            focus:outline-none focus:ring-2 focus:ring-[#5C452B] focus:ring-opacity-50 
+            hover:text-stone-950
+            hover:border-blue-900
+            focus:outline-none focus:ring-2 focus:ring-[#3b82f6] focus:ring-opacity-50 
             transition-colors duration-150 ease-in-out group"
             >
               <svg
@@ -39,13 +40,14 @@ export function SiteHeader() {
             </a>
 
             <a
-              href="#"
+              href="/videos"
               className="inline-flex items-center justify-center px-6 py-3 
-            border-2 border-[#5C452B] 
-            text-[#1F1F1F] font-semibold 
+            border-1 border-[#3b82f6] 
+            text-zinc-700 font-semibold 
             bg-white rounded-lg shadow-md 
-            hover:bg-gray-50 
-            focus:outline-none focus:ring-2 focus:ring-[#5C452B] focus:ring-opacity-50 
+            hover:text-stone-950
+            hover:border-blue-900
+            focus:outline-none focus:ring-2 focus:ring-[#3b82f6] focus:ring-opacity-50 
             transition-colors duration-150 ease-in-out group"
             >
               <svg
@@ -59,13 +61,14 @@ export function SiteHeader() {
             </a>
 
             <a
-              href="#"
+              href="/amazon-favorites"
               className="inline-flex items-center justify-center px-6 py-3 
-            border-2 border-[#5C452B] 
-            text-[#1F1F1F] font-semibold 
+            border-1 border-[#3b82f6] 
+            text-zinc-700 font-semibold 
             bg-white rounded-lg shadow-md 
-            hover:bg-gray-50 
-            focus:outline-none focus:ring-2 focus:ring-[#5C452B] focus:ring-opacity-50 
+            hover:text-stone-950
+            hover:border-blue-900
+            focus:outline-none focus:ring-2 focus:ring-[#3b82f6] focus:ring-opacity-50 
             transition-colors duration-150 ease-in-out group"
             >
               <svg
@@ -79,13 +82,14 @@ export function SiteHeader() {
             </a>
 
             <a
-              href="#"
+              href="/ride-with-us"
               className="inline-flex items-center justify-center px-6 py-3 
-                    border-2 border-[#5C452B] 
-                    text-[#1F1F1F] font-semibold 
+                    border-1 border-[#3b82f6] 
+                    text-zinc-700  font-semibold 
                     bg-white rounded-lg shadow-md 
-                    hover:bg-gray-50 
-                    focus:outline-none focus:ring-2 focus:ring-[#5C452B] focus:ring-opacity-50 
+                    hover:text-stone-950
+                    hover:border-blue-900
+                    focus:outline-none focus:ring-2 focus:ring-[#3b82f6] focus:ring-opacity-50 
                     transition-colors duration-150 ease-in-out group"
             >
               <svg
@@ -99,13 +103,15 @@ export function SiteHeader() {
             </a>
 
             <a
-              href="#"
+              href="/partners-and-friends"
               className="inline-flex items-center justify-center px-6 py-3 
-                    border-2 border-[#5C452B] 
-                    text-[#1F1F1F] font-semibold 
+                    border-1 border-[#3b82f6] 
+                    text-zinc-700 font-semibold 
                     bg-white rounded-lg shadow-md 
-                    hover:bg-gray-50 
-                    focus:outline-none focus:ring-2 focus:ring-[#5C452B] focus:ring-opacity-50 
+                    
+                    hover:text-stone-950
+                    hover:border-blue-900
+                    focus:outline-none focus:ring-2 focus:ring-[#3b82f6] focus:ring-opacity-50 
                     transition-colors duration-150 ease-in-out group"
             >
               <svg
