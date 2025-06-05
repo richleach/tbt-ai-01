@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function notFound() {
   return (
-    <div className="container px-10 mx-auto mb-8">
-      <main className="flex flex-col items-center justify-between text-white bg-black border-2 rounded-lg p-6">
+    <div className="container px-10 mx-auto mb-8 mt-6 flex-1">
+      <main className="flex flex-col items-center justify-between text-black bg-white border-2 rounded-lg p-6 mt-8">
         <h4>
           Sorry, but we can&apos;t seem to find the page you&apos;re looking
           for.
