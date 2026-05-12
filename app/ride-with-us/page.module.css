@@ -1,0 +1,102 @@
+.main {
+  min-height: 100vh;
+}
+
+/* Hero banner */
+.hero {
+  background: var(--color-surface-1);
+  border-bottom: 1px solid var(--color-line);
+  padding: var(--space-16) var(--space-8);
+  text-align: center;
+}
+
+.overline {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  display: block;
+  margin-bottom: var(--space-3);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--color-white);
+}
+
+/* Content */
+.content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-16) var(--space-8);
+}
+
+/* Photo + caption (amazon-favorites card / intro typography) */
+.photoCard {
+  margin: 0 0 var(--space-8);
+  border: 1px solid var(--color-line);
+  background: var(--color-surface-1);
+  overflow: hidden;
+}
+
+.photoImageWrap {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.photoCaption {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--color-grey-1);
+  line-height: 1.7;
+  margin: 0;
+  padding: var(--space-6);
+}
+
+.firstSection .heading {
+  margin-top: 0;
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: var(--color-white);
+  margin-bottom: var(--space-3);
+  margin-top: var(--space-8);
+}
+
+.body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--color-grey-1);
+}
+
+/* ─── Responsive ──────────────────────────────────────── */
+@media (max-width: 600px) {
+  .hero {
+    padding: var(--space-12) var(--space-4);
+  }
+
+  .content {
+    padding: var(--space-12) var(--space-4);
+  }
+}

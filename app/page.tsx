@@ -1,65 +1,111 @@
-import Image from "next/image";
+import Navbar from "./components/Navbar";
+import HeroCarousel from "./components/HeroCarousel";
+import ArticleCard from "./components/ArticleCard";
+import SectionHeader from "./components/SectionHeader";
+import ScrollReveal from "./components/ScrollReveal";
+import { StaggerGrid, StaggerItem } from "./components/StaggerGrid";
+import Footer from "./components/Footer";
+import styles from "./page.module.css";
+
+const LATEST_ARTICLES = [
+  {
+    href: "https://www.youtube.com/watch?v=76J2Ba9rAg4",
+    tag: "Moab Spring 2026",
+    tagVariant: "accent" as const,
+    image: "/images/moabSpring2026/moab01.png",
+    title: "CAN-AM Influencer Ride Day 1 - Morning",
+    excerpt: "They let us loose in the desert and then the rains came....",
+    readTime: "8 min read",
+  },
+  {
+    href: "https://www.youtube.com/watch?v=9ng2DYxptJ0&",
+    tag: "Moab Spring 2026",
+    tagVariant: "accent" as const,
+    image: "/images/moabSpring2026/moab03.png",
+    title: "CAN-AM Influencer Ride Day 1 - Afternoon",
+    excerpt: "I think the heavy wet stuff is passed us by now.",
+    readTime: "12 min read",
+  },
+  {
+    href: "https://www.youtube.com/watch?v=BiHrqVBPsxw",
+    tag: "Moab Spring 2026",
+    tagVariant: "accent" as const,
+    image: "/images/moabSpring2026/moab02.png",
+    title: "CAN-AM Influencer Ride Day 2",
+    excerpt: "CAN-AM Maverick Rs' - Capable machines on a perfect Moab day",
+    readTime: "6 min read",
+  },
+];
+
+const STORE_ARTICLES = [
+  {
+    tag: "Sweatshirts",
+    tagVariant: "accent" as const,
+    image: "/images/storeImages/pinkHoodie.png",
+    title: "Sweatshirts & T-Shirts",
+    excerpt: "Wear our brand on your person. It'll feel naughty.",
+  },
+  {
+    tag: "Coffee Mugs",
+    tagVariant: "accent" as const,
+    image: "/images/storeImages/coffeeMug.png",
+    title: "Official Mugs & Stuff",
+    excerpt: "...what you drink from it is your business.",
+  },
+  {
+    tag: "Amazon List",
+    tagVariant: "accent" as const,
+    image: "/images/storeImages/workLight.png",
+    title: "Trail Tested",
+    excerpt: "Stuff we use to keep riding.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <Navbar />
+
+      <main>
+        {/* Hero Carousel */}
+        <HeroCarousel />
+
+        {/* Animated accent line separator */}
+        <div className={styles.accentLineFull} />
+
+        {/* Latest Articles */}
+        <section className={styles.section}>
+          <ScrollReveal>
+            <SectionHeader overline="Latest" title="From the Trail" />
+          </ScrollReveal>
+          <StaggerGrid className={styles.cardGrid}>
+            {LATEST_ARTICLES.map(({ readTime: _readTime, ...article }) => (
+              <StaggerItem key={article.title}>
+                <ArticleCard {...article} />
+              </StaggerItem>
+            ))}
+          </StaggerGrid>
+        </section>
+
+        {/* Animated accent line separator */}
+        <div className={styles.accentLineFull} />
+
+        {/* Store Section */}
+        <section className={styles.section}>
+          <ScrollReveal>
+            <SectionHeader overline="Products/Review" title="Visit the Store" />
+          </ScrollReveal>
+          <StaggerGrid className={styles.cardGrid}>
+            {STORE_ARTICLES.map((article) => (
+              <StaggerItem key={article.title}>
+                <ArticleCard {...article} />
+              </StaggerItem>
+            ))}
+          </StaggerGrid>
+        </section>
       </main>
-    </div>
+
+      <Footer />
+    </>
   );
 }

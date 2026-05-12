@@ -1,0 +1,176 @@
+.main {
+  min-height: 100vh;
+}
+
+/* Hero banner */
+.hero {
+  background: var(--color-surface-1);
+  border-bottom: 1px solid var(--color-line);
+  padding: var(--space-16) var(--space-8);
+  text-align: center;
+}
+
+.overline {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  display: block;
+  margin-bottom: var(--space-3);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--color-white);
+}
+
+/* Content */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-16) var(--space-8);
+}
+
+/* Section headers */
+.sectionHeader {
+  margin-bottom: var(--space-8);
+}
+
+.sectionOverline {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  display: block;
+  margin-bottom: var(--space-3);
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.05;
+  color: var(--color-white);
+  margin-bottom: var(--space-3);
+}
+
+.sectionDesc {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--color-grey-1);
+  line-height: 1.7;
+  max-width: 100%;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+/* Card */
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface-1);
+  border: 1px solid var(--color-line);
+  overflow: hidden;
+  transition: border-color var(--dur-base) var(--ease-snappy),
+              transform var(--dur-base) var(--ease-out-expo);
+  height: 100%;
+}
+
+.card:hover {
+  border-color: var(--color-accent-line);
+  transform: translateY(-2px);
+}
+
+.cardImageWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8);
+  background: var(--color-surface-2);
+  border-bottom: 1px solid var(--color-line);
+  min-height: 200px;
+}
+
+.cardImage {
+  max-width: 180px;
+  height: auto;
+  object-fit: contain;
+}
+
+.cardBody {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  flex: 1;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.sponsorBadge {
+  width: 160px;
+  height: auto;
+  opacity: 0.85;
+}
+
+/* Accent line */
+.accentLine {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2.5s ease-in-out infinite;
+  margin: var(--space-16) 0;
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+/* ─── Responsive ──────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: var(--space-12) var(--space-4);
+  }
+
+  .content {
+    padding: var(--space-12) var(--space-4);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

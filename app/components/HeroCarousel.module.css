@@ -1,0 +1,35 @@
+.hero {
+  width: 100%;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-12) var(--space-8);
+}
+
+.logo {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+}
+
+/* ─── Responsive ──────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .hero {
+    padding: var(--space-8) var(--space-6);
+  }
+
+  .logo {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .logo {
+    max-width: 100%;
+  }
+}
