@@ -7,6 +7,23 @@
   min-height: 0;
 }
 
+.featuredLink {
+  display: block;
+  text-decoration: none;
+  line-height: 0;
+}
+
+.featuredImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: transparent;
+}
+
+.featuredLink:hover .featuredImage {
+  opacity: 0.9;
+}
+
 .featuredSlot {
   height: auto;
 }
