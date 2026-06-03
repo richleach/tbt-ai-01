@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Navbar from "./components/Navbar";
+import cardStyles from "./components/ArticleCard.module.css";
 import HeroCarousel from "./components/HeroCarousel";
 import ArticleCard from "./components/ArticleCard";
 import SectionHeader from "./components/SectionHeader";
@@ -85,11 +87,28 @@ export default function Home() {
               </StaggerItem>
             ))}
           </StaggerGrid>
+          <ScrollReveal>
+            <div className={`${styles.cardGrid} ${styles.featuredRow}`}>
+              <div className={styles.featuredSpacer} aria-hidden="true" />
+              <article className={`${cardStyles.card} ${styles.featuredSlot}`}>
+                <div className={cardStyles.img}>
+                  <Image
+                    src="/images/moabSpring2026/canAmMoabThumbnail.png"
+                    alt="CAN-AM Moab Spring 2026"
+                    width={800}
+                    height={450}
+                    className={cardStyles.imgFill}
+                  />
+                </div>
+              </article>
+              <div className={styles.featuredSpacer} aria-hidden="true" />
+            </div>
+          </ScrollReveal>
         </section>
 
         {/* Animated accent line separator */}
         <div className={styles.accentLineFull} />
-
+        
         {/* Store Section */}
         <section className={styles.section}>
           <ScrollReveal>
