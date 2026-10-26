@@ -12,9 +12,9 @@ import styles from "./page.module.css";
 const sponsors = [
   {
     id: "1",
-    title: "Ride Royal Blue, TN",
-    image: "/images/partners/rideRoyalBlueLogo.png",
-    link: "http://rideroyalblue.com",
+    title: "DTF Powersports",
+    image: "/images/partners/dtfPowerSports.png",
+    link: "https://dtfpowersports.com/",
   },
   {
     id: "3",
@@ -73,12 +73,7 @@ const partners = [
     image: "/images/partners/knitDecorGifts.png",
     link: "https://www.etsy.com/shop/KnitDecorGifts",
   },
-  {
-    id: "10",
-    title: "DTF Powersports",
-    image: "/images/partners/dtfPowerSports.png",
-    link: "https://dtfpowersports.com/",
-  },
+  
   {
     id: "11",
     title: "Slawdog Off-road Shenanigans",
